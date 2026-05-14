@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 	import { locale, t } from '$lib/i18n/store';
 	import Icon from '@iconify/svelte';
+	import { resolve } from '$app/paths';
 
 	let menuOpen = false;
 	let isDark = true;
@@ -36,21 +37,19 @@
 
 <nav
 	class="fixed z-50 w-full shadow-sm backdrop-blur-md"
-	style="background-color: color-mix(in srgb, var(--color-bg-0) 85%, transparent); color: var(--color-text);"
+	style="background-color: color-mix(in srgb, var(--color-bg-0) 85%, transparent); color: var(--tx-main);"
 >
 	<div class="relative container mx-auto flex items-center justify-between px-6 py-4">
 		<!-- Logo -->
 		<a
-			// eslint-disable-next-line svelte/no-navigation-without-resolve
-			href="/"
-			class="text-2xl font-extrabold tracking-tight transition-transform hover:scale-105"
-			style="color: var(--color-theme-2);"
+			href={resolve('/')}
+			class="text-2xl font-extrabold tracking-tight text-theme-accent2 transition-transform hover:scale-105"
 		>
-			Diogo<span style="color: var(--color-text);">.dev</span>
+			Diogo<span class="text-theme-text">.dev</span>
 		</a>
 
 		<!-- Links -->
-		<ul class="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 md:flex">
+		<ul class="items-center gap-8 md:flex">
 			<li>
 				<a href="#about" class="font-medium transition-opacity hover:opacity-70"
 					>{$t('nav.about')}</a

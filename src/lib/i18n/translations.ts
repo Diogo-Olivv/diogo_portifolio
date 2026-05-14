@@ -2,6 +2,7 @@ export const translations = {
 	pt: {
 		nav: {
 			about: 'Sobre',
+			career: 'Carreira',
 			skills: 'Habilidades',
 			projects: 'Projetos',
 			contact: 'Contato'
@@ -9,18 +10,22 @@ export const translations = {
 		hero: {
 			greeting: 'Olá, eu sou',
 			description_1: 'Estudante de Engenharia de Software focado em construir sistemas eficientes.',
-			description_2: 'De interfaces fluidas a modelos preditivos e otimização arquitetural.',
-			btn_projects: 'Ver Projetos',
-			btn_trajectory: 'Minha Trajetória'
+			description_2: 'De interfaces fluidas a modelos preditivos e otimização arquitetural.'
 		},
 		footer: {
 			socials: 'Redes Sociais',
 			roles: 'Engenharia de Software • Desenvolvedor Full-Stack • Engenheiro de ML'
+		},
+		experience: {
+			title: 'Carreira',
+			professional: 'Experiência Profissional',
+			academic: 'Experiência Acadêmica'
 		}
 	},
 	en: {
 		nav: {
 			about: 'About',
+			career: 'Career',
 			skills: 'Skills',
 			projects: 'Projects',
 			contact: 'Contact'
@@ -28,13 +33,16 @@ export const translations = {
 		hero: {
 			greeting: 'Hi, I am',
 			description_1: 'Software Engineering student focused on building efficient systems.',
-			description_2: 'From fluid interfaces to predictive models and architectural optimization.',
-			btn_projects: 'View Projects',
-			btn_trajectory: 'My Trajectory'
+			description_2: 'From fluid interfaces to predictive models and architectural optimization.'
 		},
 		footer: {
 			socials: 'Socials',
 			roles: 'Software Engineering • Full-Stack Developer • ML Engineer'
+		},
+		experience: {
+			title: 'Career',
+			professional: 'Professional Experience',
+			academic: 'Academic Experience'
 		}
 	}
 };
