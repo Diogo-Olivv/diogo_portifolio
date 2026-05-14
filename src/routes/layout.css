@@ -4,21 +4,77 @@
 @import '@fontsource/fira-mono';
 
 @theme {
-	/* Latte (Tema Claro) */
-	--color-latte-base: #eff1f5;
-	--color-latte-surface0: #ccd0da;
-	--color-latte-surface1: #bcc0cc;
-	--color-latte-text: #4c4f69;
+	/* Catppuccin Latte (Light) */
+	--color-latte-rosewater: #dc8a78;
+	--color-latte-flamingo: #dd7878;
+	--color-latte-pink: #ea76cb;
+	--color-latte-mauve: #8839ef;
+	--color-latte-red: #d20f39;
+	--color-latte-maroon: #e64553;
 	--color-latte-peach: #fe640b;
+	--color-latte-yellow: #df8e1d;
+	--color-latte-green: #40a02b;
+	--color-latte-teal: #179299;
+	--color-latte-sky: #04a5e5;
+	--color-latte-sapphire: #209fb5;
 	--color-latte-blue: #1e66f5;
+	--color-latte-lavender: #7287fd;
+	--color-latte-text: #4c4f69;
+	--color-latte-subtext1: #5c5f77;
+	--color-latte-subtext0: #6c6f85;
+	--color-latte-overlay2: #7c7f93;
+	--color-latte-overlay1: #8c8fa1;
+	--color-latte-overlay0: #9ca0b0;
+	--color-latte-surface2: #acb0be;
+	--color-latte-surface1: #bcc0cc;
+	--color-latte-surface0: #ccd0da;
+	--color-latte-base: #e5e7eb;
+	--color-latte-mantle: #d0d3db;
+	--color-latte-crust: #7b7e83;
 
-	/* Macchiato (Tema Escuro) */
-	--color-macchiato-base: #24273a;
-	--color-macchiato-surface0: #363a4f;
-	--color-macchiato-surface1: #494d64;
-	--color-macchiato-text: #cad3f5;
+	/* Catppuccin Macchiato (Dark) */
+	--color-macchiato-rosewater: #f4dbd6;
+	--color-macchiato-flamingo: #f0c6c6;
+	--color-macchiato-pink: #f5bde6;
+	--color-macchiato-mauve: #c6a0f6;
+	--color-macchiato-red: #ed8796;
+	--color-macchiato-maroon: #ee99a0;
 	--color-macchiato-peach: #f5a97f;
+	--color-macchiato-yellow: #eed49f;
+	--color-macchiato-green: #a6da95;
+	--color-macchiato-teal: #8bd5ca;
+	--color-macchiato-sky: #91d7e3;
+	--color-macchiato-sapphire: #7dc4e4;
 	--color-macchiato-blue: #8aadf4;
+	--color-macchiato-lavender: #b7bdf8;
+	--color-macchiato-text: #cad3f5;
+	--color-macchiato-subtext1: #b8c0e0;
+	--color-macchiato-subtext0: #a5adcb;
+	--color-macchiato-overlay2: #939ab7;
+	--color-macchiato-overlay1: #8087a2;
+	--color-macchiato-overlay0: #6e738d;
+	--color-macchiato-surface2: #5b6078;
+	--color-macchiato-surface1: #494d64;
+	--color-macchiato-surface0: #363a4f;
+	--color-macchiato-base: #24273a;
+	--color-macchiato-mantle: #1e2030;
+	--color-macchiato-crust: #181926;
+
+	/* Tailwind Names */
+	--color-theme-base: var(--bg-base);
+	--color-theme-mantle: var(--bg-mantle);
+	--color-theme-crust: var(--bg-crust);
+	--color-theme-surface0: var(--bg-surface0);
+	--color-theme-surface1: var(--bg-surface1);
+	--color-theme-text: var(--tx-main);
+	--color-theme-subtext: var(--tx-sub);
+	--color-theme-accent1: var(--ac-1);
+	--color-theme-accent2: var(--ac-2);
+	--color-theme-accent3: var(--ac-3);
+
+	--color-theme-lightblue: var(--lightblue);
+	--color-theme-lightpink: var(--lightpink);
+	--color-theme-gray: var(--gray);
 }
 
 :root {
@@ -27,32 +83,56 @@
 		'Open Sans', 'Helvetica Neue', sans-serif;
 	--font-mono: 'Fira Mono', monospace;
 
-	--color-bg-0: #eff1f5; /* Latte Base */
-	--color-bg-1: #ccd0da; /* Latte Surface 0 */
-	--color-bg-2: #bcc0cc; /* Latte Surface 1 */
-	--color-theme-1: #fe640b; /* Latte Peach (Destaque principal) */
-	--color-theme-2: #1e66f5; /* Latte Blue (Destaque secundário) */
-	--color-text: #4c4f69; /* Latte Text */
-
 	--column-width: 42rem;
 	--column-margin-top: 4rem;
 
+	/* DEFAULT: Latte */
+	--bg-base: var(--color-latte-base);
+	--bg-mantle: var(--color-latte-mantle);
+	--bg-crust: var(--color-latte-crust);
+	--bg-surface0: var(--color-latte-surface0);
+	--bg-surface1: var(--color-latte-surface1);
+
+	--tx-main: var(--color-latte-text);
+	--tx-sub: var(--color-latte-subtext1);
+
+	--ac-1: var(--color-latte-mauve);
+	--ac-2: var(--color-latte-lavender);
+	--ac-3: var(--color-latte-blue);
+
+	--lightblue: var(--color-macchiato-sapphire);
+	--lightpink: var(--color-macchiato-red);
+	--gray: var(--color-macchiato-surface2);
+
 	font-family: var(--font-body);
-	color: var(--color-text);
-	background-color: var(--color-bg-0);
+	color: var(--tx-main);
+	background-color: var(--bg-base);
 }
 
+/* DARK MODE: Macchiato (Modo Escuro) */
 :root.dark {
-	--color-bg-0: #24273a; /* Macchiato Base */
-	--color-bg-1: #363a4f; /* Macchiato Surface 0 */
-	--color-bg-2: #494d64; /* Macchiato Surface 1 */
-	--color-theme-1: #f5a97f; /* Macchiato Peach */
-	--color-theme-2: #8aadf4; /* Macchiato Blue */
-	--color-text: #cad3f5; /* Macchiato Text */
+	--bg-base: var(--color-macchiato-base);
+	--bg-mantle: var(--color-macchiato-mantle);
+	--bg-crust: var(--color-macchiato-crust);
+	--bg-surface0: var(--color-macchiato-surface0);
+	--bg-surface1: var(--color-macchiato-surface1);
+
+	--tx-main: var(--color-macchiato-text);
+	--tx-sub: var(--color-macchiato-subtext1);
+
+	--ac-1: var(--color-macchiato-mauve);
+	--ac-2: var(--color-macchiato-lavender);
+	--ac-3: var(--color-macchiato-blue);
+
+	--lightblue: var(--color-macchiato-sapphire);
+	--lightpink: var(--color-macchiato-red);
+	--gray: var(--color-macchiato-surface2);
+
+	font-family: var(--font-body);
+	color: var(--tx-main);
+	background-color: var(--bg-base);
 }
 
-
-/* Clean Theme Transiction for Components*/
 *,
 *::before,
 *::after {
@@ -62,9 +142,8 @@
 	transition-duration: 400ms;
 }
 
-/* Evita que o fundo geral do site fique branco/preto instantaneamente */
 body,
 html {
-	background-color: var(--color-bg-0);
-	color: var(--color-text);
+	background-color: var(--bg-base);
+	color: var(--tx-main);
 }

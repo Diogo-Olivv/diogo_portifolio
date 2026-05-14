@@ -1,4 +1,5 @@
 <script lang="ts">
+	import BackgroundGrid from '$lib/components/helpers/BackgroundGrid.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import Navbar from '$lib/components/Navbar.svelte';
 	import './layout.css';
@@ -7,6 +8,8 @@
 </script>
 
 <div class="app">
+	<BackgroundGrid />
+
 	<Navbar />
 
 	<main>{@render children()}</main>
