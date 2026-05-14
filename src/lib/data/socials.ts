@@ -1,4 +1,9 @@
-import type { SocialLink } from '$lib/models/social_link';
+export interface SocialLink {
+	name: string;
+	url: string;
+	icon: string;
+	colorClass: string;
+}
 
 export const socials: SocialLink[] = [
 	{

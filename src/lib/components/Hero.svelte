@@ -3,10 +3,7 @@
 	import Socials from './Socials.svelte';
 </script>
 
-<section
-	id="home"
-	class="relative flex min-h-screen items-center justify-center overflow-hidden text-center"
->
+<section class="relative flex min-h-screen items-center justify-center overflow-hidden text-center">
 	<div class="z-10 flex max-w-4xl flex-col items-center gap-16 p-8">
 		<h1 class=" text-5xl font-extrabold tracking-tight text-theme-text md:text-7xl">
 			{$t('hero.greeting')} <span class="text-theme-accent2">Diogo</span>

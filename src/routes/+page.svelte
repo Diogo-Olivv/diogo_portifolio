@@ -1,6 +1,8 @@
 <script lang="ts">
-	import Experience from '$lib/components/Experience.svelte';
+	import AcademicExperiences from '$lib/components/AcademicExperiences.svelte';
+	import JobExperiences from '$lib/components/JobExperiences.svelte';
 	import Hero from '$lib/components/Hero.svelte';
+	import Projects from '$lib/components/Projects.svelte';
 </script>
 
 <svelte:head>
@@ -9,9 +11,20 @@
 </svelte:head>
 
 <section>
-	<Hero />
+	<section id="home">
+		<Hero />
+	</section>
 
-	<Experience />
+	<section id="experience">
+		<div class="flex flex-col gap-30">
+			<JobExperiences />
+			<AcademicExperiences />
+		</div>
+	</section>
+
+	<section>
+		<Projects />
+	</section>
 </section>
 
 <style>
