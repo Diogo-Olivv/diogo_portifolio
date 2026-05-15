@@ -1,5 +1,5 @@
 <section>
-	<div class="absolute inset-0 bg-theme-base"></div>
+	<div class="absolute inset-0 -z-10 bg-theme-base"></div>
 	<div class="bg-grid-pattern absolute inset-0"></div>
 	<div class="bg-gradient-glow absolute inset-0"></div>
 </section>

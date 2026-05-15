@@ -36,7 +36,7 @@
 </script>
 
 <nav
-	class="fixed z-50 w-full shadow-sm backdrop-blur-md"
+	class="fixed top-0 z-50 w-full shadow-sm backdrop-blur-md"
 	style="background-color: color-mix(in srgb, var(--color-bg-0) 85%, transparent); color: var(--tx-main);"
 >
 	<div class="relative container mx-auto flex items-center justify-between px-6 py-4">
@@ -51,23 +51,18 @@
 		<!-- Links -->
 		<ul class="items-center gap-8 md:flex">
 			<li>
-				<a href="#about" class="font-medium transition-opacity hover:opacity-70"
-					>{$t('nav.about')}</a
+				<a href={resolve('/#career')} class="font-medium transition-opacity hover:opacity-70"
+					>{$t('nav.career')}</a
+				>
+			</li>
+			<li>
+				<a href={resolve('/projects')} class="font-medium transition-opacity hover:opacity-70"
+					>{$t('nav.projects')}</a
 				>
 			</li>
 			<li>
 				<a href="#skills" class="font-medium transition-opacity hover:opacity-70"
 					>{$t('nav.skills')}</a
-				>
-			</li>
-			<li>
-				<a href="#projects" class="font-medium transition-opacity hover:opacity-70"
-					>{$t('nav.projects')}</a
-				>
-			</li>
-			<li>
-				<a href="#contact" class="font-medium transition-opacity hover:opacity-70"
-					>{$t('nav.contact')}</a
 				>
 			</li>
 		</ul>

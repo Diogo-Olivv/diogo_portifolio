@@ -1,5 +1,8 @@
+<script module>
+	export const prerender = true;
+</script>
+
 <script lang="ts">
-	import BackgroundGrid from '$lib/components/helpers/BackgroundGrid.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import Navbar from '$lib/components/Navbar.svelte';
 	import './layout.css';
@@ -7,9 +10,11 @@
 	let { children } = $props();
 </script>
 
-<div class="app">
-	<BackgroundGrid />
+<svelte:head>
+	<title>Diogo Oliveira</title>
+</svelte:head>
 
+<div class="app">
 	<Navbar />
 
 	<main>{@render children()}</main>
@@ -33,23 +38,5 @@
 		max-width: 64rem;
 		margin: 0 auto;
 		box-sizing: border-box;
-	}
-
-	footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 12px;
-	}
-
-	footer a {
-		font-weight: bold;
-	}
-
-	@media (min-width: 480px) {
-		footer {
-			padding: 12px 0;
-		}
 	}
 </style>

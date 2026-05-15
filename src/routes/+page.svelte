@@ -3,6 +3,7 @@
 	import JobExperiences from '$lib/components/JobExperiences.svelte';
 	import Hero from '$lib/components/Hero.svelte';
 	import Projects from '$lib/components/Projects.svelte';
+	import BackgroundGrid from '$lib/components/helpers/BackgroundGrid.svelte';
 </script>
 
 <svelte:head>
@@ -10,21 +11,21 @@
 	<meta name="description" content="Meu portifólio pessoal" />
 </svelte:head>
 
-<section>
-	<section id="home">
+<section class="min-w-full">
+	<BackgroundGrid />
+
+	<div id="home">
 		<Hero />
-	</section>
+	</div>
 
-	<section id="experience">
-		<div class="flex flex-col gap-30">
-			<JobExperiences />
-			<AcademicExperiences />
-		</div>
-	</section>
+	<div id="career" class="mb-20 flex flex-col gap-30 p-5">
+		<JobExperiences />
+		<AcademicExperiences />
+	</div>
 
-	<section>
+	<div id="projects">
 		<Projects />
-	</section>
+	</div>
 </section>
 
 <style>

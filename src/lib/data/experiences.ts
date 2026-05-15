@@ -1,9 +1,14 @@
 import { techDictionary as t, type Technology } from './technologies';
 
+import leoni_hub from '$lib/images/projects/leoni_hub.png';
+
+
 export interface LocalizedContent {
 	role: string;
 	period: string;
 	description: string[];
+	longDescription?: string;
+
 }
 
 export interface ExperienceEntry {
@@ -15,6 +20,22 @@ export interface ExperienceEntry {
 		en: LocalizedContent;
 	};
 }
+
+export interface Project {
+	slug: string;		// For generating dinamic pages
+	title: string;
+	image: string;
+	technologies: Technology[];
+	links: {
+		github?: string;
+		live?: string;
+	};
+	translations: {
+		pt: LocalizedContent;
+		en: LocalizedContent;
+	};
+}
+
 
 export const jobExperiences: ExperienceEntry[] = [
 	{
@@ -117,4 +138,104 @@ export const academicExperiences: ExperienceEntry[] = [
 			}
 		}
 	}
+];
+
+export const projects: Project[] = [
+	{
+		slug: 'leoni-hub',
+		title: 'Leoni Hub',
+		image: leoni_hub,	
+		technologies: [t.javascript, t.react, t.nodejs, t.postgresql, t.html, t.css],
+		links: {
+			github: 'https://github.com/Diogo-Olivv/seu-repo',
+			live: 'https://github.com/Diogo-Olivv/seu-repo',
+		},
+		translations: {
+			pt: {
+				role: 'Tech Lead & Full-Stack',
+				period: 'Fev 2025 — Jul 2025',
+				description: [
+					'Sistema B2B construído para um cliente real do varejo de vestuário.',
+					'Otimização do processamento e gestão do estoque em tempo real.',
+					'Aumento da velocidade do fluxo operacional em mais de 70%.'
+				],
+				longDescription: `
+					Este foi um projeto desafiador onde atuei como Líder Técnico. O principal problema do cliente era a lentidão e a falta de sincronia no controle de peças físicas versus vendas digitais. 
+					
+					Projetamos uma arquitetura robusta no backend utilizando Node.js e PostgreSQL para garantir a integridade das transações (ACID). No frontend, focamos em uma interface responsiva e de carregamento rápido com React.
+					
+					Principais Desafios:
+					- Sincronização em tempo real de inventário.
+					- Criação de dashboards de análise de vendas.
+				`
+			},
+			en: {
+				role: 'Tech Lead & Full-Stack',
+				period: 'Feb 2025 — Jul 2025',
+				description: [
+					'B2B system built for a real retail clothing client.',
+					'Optimization of real-time inventory processing and management.',
+					'Increased operational flow speed by more than 70%.'
+				],
+				longDescription: `
+					This was a challenging project where I served as Technical Lead. The client's main problem was slowness and lack of synchrony in controlling physical parts versus digital sales. 
+					
+					We designed a robust architecture on the backend using Node.js and PostgreSQL to ensure transaction integrity (ACID). On the frontend, we focused on a responsive and fast-loading interface with React.
+					
+					Main Challenges:
+					- Real-time inventory synchronization.
+					- Creation of sales analysis dashboards.
+				`
+			}
+		}
+	},
+	{
+		slug: 'leoni-huba',
+		title: 'Leoni Hub',
+		image: leoni_hub,	
+		technologies: [t.javascript, t.react, t.nodejs, t.postgresql, t.html, t.css],
+		links: {
+			github: 'https://github.com/Diogo-Olivv/seu-repo',
+			live: 'https://github.com/Diogo-Olivv/seu-repo',
+		},
+		translations: {
+			pt: {
+				role: 'Tech Lead & Full-Stack',
+				period: 'Fev 2025 — Jul 2025',
+				description: [
+					'Sistema B2B construído para um cliente real do varejo de vestuário.',
+					'Otimização do processamento e gestão do estoque em tempo real.',
+					'Aumento da velocidade do fluxo operacional em mais de 70%.'
+				],
+				longDescription: `
+					Este foi um projeto desafiador onde atuei como Líder Técnico. O principal problema do cliente era a lentidão e a falta de sincronia no controle de peças físicas versus vendas digitais. 
+					
+					Projetamos uma arquitetura robusta no backend utilizando Node.js e PostgreSQL para garantir a integridade das transações (ACID). No frontend, focamos em uma interface responsiva e de carregamento rápido com React.
+					
+					Principais Desafios:
+					- Sincronização em tempo real de inventário.
+					- Criação de dashboards de análise de vendas.
+				`
+			},
+			en: {
+				role: 'Tech Lead & Full-Stack',
+				period: 'Feb 2025 — Jul 2025',
+				description: [
+					'B2B system built for a real retail clothing client.',
+					'Optimization of real-time inventory processing and management.',
+					'Increased operational flow speed by more than 70%.'
+				],
+				longDescription: `
+					This was a challenging project where I served as Technical Lead. The client's main problem was slowness and lack of synchrony in controlling physical parts versus digital sales. 
+					
+					We designed a robust architecture on the backend using Node.js and PostgreSQL to ensure transaction integrity (ACID). On the frontend, we focused on a responsive and fast-loading interface with React.
+					
+					Main Challenges:
+					- Real-time inventory synchronization.
+					- Creation of sales analysis dashboards.
+				`
+			}
+		}
+	}
+	
 ];

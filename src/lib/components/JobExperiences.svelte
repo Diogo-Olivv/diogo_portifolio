@@ -5,7 +5,7 @@
 </script>
 
 <section>
-	<div class="flex flex-col items-center">
+	<div class=" flex flex-col items-center">
 		<h3
 			class="min-x-4xl mb-20 text-4xl font-bold tracking-[0.2em] text-theme-accent3 uppercase opacity-70"
 		>

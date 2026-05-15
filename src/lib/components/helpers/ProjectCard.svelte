@@ -1,39 +1,41 @@
 <script lang="ts">
-	import type { Project } from '$lib/data/projects';
-	import Carousel from './Carousel.svelte';
+	import type { Project } from '$lib/data/experiences';
+	import { locale } from '$lib/i18n/store';
+	import Technologies from './Technologies.svelte';
 
 	let { project }: { project: Project } = $props();
+	let projectText = $derived(project.translations[$locale]);
 </script>
 
-<div
-	class="flex flex-col gap-8 border-b border-theme-surface0 py-10 last:border-0 md:flex-row md:items-center"
->
-	<div class="flex w-full flex-col justify-center md:w-1/2">
-		<h3 class="text-3xl font-bold text-theme-accent1">{project.title}</h3>
-		<p class="mt-1 text-lg font-medium text-theme-subtext">{project.role}</p>
-		<p class="mb-6 font-mono text-sm text-theme-text/60">{project.period}</p>
+<section>
+	<div>
+		<a
+			// eslint-disable-next-line svelte/no-navigation-without-resolve
+			href={`/projects/${project.slug}`}
+			class="border-surface0 bg-base hover:border-accent group block space-y-3 rounded-xl border p-5 shadow-lg transition-colors duration-200"
+		>
+			<img
+				src={project.image}
+				alt={project.image}
+				class="mb-4 aspect-video w-full rounded-md object-cover object-center"
+				style:view-transition-name="project-img-{project.slug}"
+			/>
+			<div class="flex items-center justify-between gap-3 pe-3">
+				<h2
+					class="text-text group-hover:text-accent min-w-0 flex-1 truncate text-xl font-semibold"
+					style:view-transition-name="project-title-{project.slug}"
+				>
+					{project.title}
+				</h2>
+				<p class="text-overlay1 shrink-0 text-xs whitespace-nowrap">
+					{projectText.period}
+				</p>
+			</div>
+			<p class="text-subtext0 line-clamp-3 text-sm">{projectText.description}</p>
 
-		<ul class="mb-8 space-y-3">
-			{#each project.shortDescription as desc (desc)}
-				<li class="flex items-start gap-3 leading-relaxed text-theme-text">
-					<span class="mt-1.5 text-[0.6rem] text-theme-accent2">⬤</span>
-					{desc}
-				</li>
-			{/each}
-		</ul>
-
-		<div>
-			<a
-				href={`/projects/${project.slug}`}
-				class="inline-flex items-center gap-2 rounded-lg bg-theme-surface0 px-6 py-3 font-semibold text-theme-accent1 transition-all hover:-translate-y-1 hover:bg-theme-surface1"
-			>
-				Ver detalhes do projeto
-				<span class="text-xl">→</span>
-			</a>
-		</div>
+			<div class="text-xs">
+				<Technologies techs={project.technologies} />
+			</div>
+		</a>
 	</div>
-
-	<div class="w-full md:w-1/2">
-		<Carousel images={project.images} />
-	</div>
-</div>
+</section>

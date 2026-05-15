@@ -1,11 +1,9 @@
 export const translations = {
 	pt: {
 		nav: {
-			about: 'Sobre',
 			career: 'Carreira',
 			skills: 'Habilidades',
 			projects: 'Projetos',
-			contact: 'Contato'
 		},
 		hero: {
 			greeting: 'Olá, eu sou',
@@ -20,15 +18,17 @@ export const translations = {
 			title: 'Carreira',
 			professional: 'Experiência Profissional',
 			academic: 'Experiência Acadêmica'
+		},
+		projects: {
+			title: 'Projetos',
+			technologies: 'Tecnologias',
 		}
 	},
 	en: {
 		nav: {
-			about: 'About',
 			career: 'Career',
 			skills: 'Skills',
 			projects: 'Projects',
-			contact: 'Contact'
 		},
 		hero: {
 			greeting: 'Hi, I am',
@@ -43,6 +43,10 @@ export const translations = {
 			title: 'Career',
 			professional: 'Professional Experience',
 			academic: 'Academic Experience'
+		},
+		projects: {
+			title: 'Projects',
+			technologies: 'Stack Used',
 		}
 	}
 };
